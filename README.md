@@ -1,2 +1,12 @@
-# xiachufang_spider
-下厨房菜谱爬虫 xiachufang spider, get chinese food image
+# 下厨房菜谱爬虫
+下厨房菜谱爬虫，获取每种菜的100多种做法，并保存在本地，以及图片
+[例子：水蒸蛋](https://www.xiachufang.com/category/1012133/)
+
+
+1. 先用 *1_get_links_mulit.py* 获取每个菜名的不同种做法，保存他们URL，为第二部提供数据。
+
+2. *2_final_verison.py* 或者每种做法的步骤，材料，准备，保存json格式，并同时保存样图，保存在不同的文件夹中
+
+3. 在2中，仅仅保存512 * 512 的图片，如果想获得全尺寸图片，用*3_ori_image_only.py*进行下载，但错误率比较高
+
+4. 如果过程爬取失败导致大量错过，可用*合并字典删除文件夹.py*进行处理
